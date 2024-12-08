@@ -8,8 +8,9 @@ model = YOLO("yolov8n.pt")
 # Load familiar faces for DeepFace
 db_path = "/workspaces/suspicious_person_detection/face_db/"  # Path to your database of familiar faces
 
-# Access the webcam
-cap = cv2.VideoCapture(0)  # 0 = default webcam; replace with video file path for testing
+# Access the phone's IP camera stream
+stream_url = "http://192.168.29.74:4747/video"  # Replace with the IP camera stream URL from your phone
+cap = cv2.VideoCapture(stream_url)
 
 while cap.isOpened():
     ret, frame = cap.read()
