@@ -6,7 +6,7 @@ from deepface import DeepFace
 model = YOLO("yolov8n.pt")
 
 # Load familiar faces for DeepFace
-db_path = "face_db/"  # Path to your database of familiar faces
+db_path = "/workspaces/suspicious_person_detection/face_db/"  # Path to your database of familiar faces
 
 # Access the webcam
 cap = cv2.VideoCapture(0)  # 0 = default webcam; replace with video file path for testing
